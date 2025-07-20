@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #ffb6c1, #fff0f5);
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .heart {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatUp 10s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -5px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -5px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .floating-board {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 80%;
+    }
+
+    .floating-board h1 {
+      color: #bd0042;
+      margin: 0;
+      font-size: 2em;
+    }
+    
+    .floating-board h4 {
+      color: #bb008c;
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .floating-board p {
+      color:red;
+      margin-top: 10px;
+      text-align: justify;
+      text
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-board">
+    <h1>Como?</h1>
+    <p>É uma pergunta que me faço as vezes sabe… como que cheguei até aqui? Como que tudo isso está acontecendo? A resposta para todos os como é a mesma: Deus! Como que eu nesses 2 meses e 22 dias eu me tornei tão bobo, tão apaixonado, tão dedicado a você Júlia… simplesmente tudo, sem nenhuma forçação sem pressa simplesmente foi acontecendo, nosso amor um pelo outro foi e vem se desenvolvendo de forma tão adorável que nossa… minha vontade de estar ao teu lado só aumenta cada vez mais. Nem digo sobre casamento, já que temos uma jornada até lá (e que não vejo a hora), mas em sim de poder dividir contigo novas experiências, pode te mostrar mais todos os meu lados, todo o amor que tenho e quero te dar. Quanto mais te conheço mais eu entendo tudo que estamos vivendo é da vontade de Deus, você me completa ( na vida terrena) somando em ponto iguais e naqueles que eu falto bastante em conhecimento e alimentação (desculpaaaa) Júlia, você é o presente de Deus a qual sempre pedi, e que a vontade dele se cumpra e nós e possamos passar por muitas mais coisas juntos e que o tempo confirme cada vez mais o quão especial é essa nossa união, que inicialmente está na primeira etapa, e que possamos ser feliz juntos, unido na mesma fé e servindo a nosso Deus pai!</p>
+    <p>Eu te amo demais Júlinhaaa, sério eu não sei e nem quero descobrir como que era, viver sem você na minha vida, que possamos estar cada vez mais juntinhos e unidos e nos conhecendo e nos amando. Já temos o plano inicial de casamento que foi tão gostoso de pensar em tudo que nossa, ainda bem que tava com a câmera porque não me contia de felicidade de está junto com você pensando nisso, por mais que seja algo tao no futuro, que talvez outro pense que é loucura falar de algo assim tão distante, mas meu propósito, desde a primeira vez que falei contigo naquela noite do dia 28 de abril é chegar até esse dia e poder dar continuidade a nossa história que estamos escrevendo desde então</p>
+    <h4>Te amo meu amorzinho, te amo de verdade!.</h4>
+  </div>
+
+  <!-- Corações animados -->
+  <script>
+    const colors = ['#ff4d6d', '#ff6b81', '#f06595', '#f783ac'];
+    for (let i = 0; i < 50; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      heart.style.background = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
